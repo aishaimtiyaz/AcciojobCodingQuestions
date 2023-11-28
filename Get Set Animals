@@ -1,0 +1,35 @@
+Create a class called Animal that has a constructor method that takes one argument: species.
+It should have a getter for species and a method called makeSound() that logs a sound the animal makes.
+Create a subclass called Cat that extends the Animal class. Add a method to the Cat class called purr() that logs "purr" to the console. Create a subclass called Dog that extends the Animal class.
+Add a method to the Dog class called bark() that logs "woof" to the console.
+//complete this code
+class Animal {
+	constructor(species) {
+    this._species = species;
+  }
+
+  get species() {
+    return this._species;
+  }
+
+  makeSound() {
+    console.log("The " + this.species + " makes a sound");
+  }
+}
+
+class Dog extends Animal {
+	 bark() {
+    console.log("woof");
+  }
+}
+
+class Cat extends Animal {
+	 purr() {
+    console.log("purr");
+  }
+}
+
+// Do not change the code below this line
+window.Animal = Animal;
+window.Dog = Dog;
+window.Cat = Cat;
